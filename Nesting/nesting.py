@@ -40,6 +40,10 @@
 # print(f"{car['model'].title()}, "
 #       f"{car['color']} rang, "
 #       f"{car['year']}-yil, {car['price']}$")
+from unittest.mock import mock_open
+
+from django.template.smartif import infix
+from magic_filter.util import in_op
 
 # clean code
 # cars = [car0, car1, car2]
@@ -107,30 +111,149 @@
 #     for lang in langs:
 #         print(f"{lang.upper()}", end='')
 
-collegues = {
-    'ali': {
-        'surname': 'valiyev',
-        'b_day': 2005,
-        'malumot': 'oliy',
-        'languages': ['python', 'c++']
+# collegues = {
+#     'ali': {
+#         'surname': 'valiyev',
+#         'b_day': 2005,
+#         'malumot': 'oliy',
+#         'languages': ['python', 'c++']
+#     },
+#     'vali': {
+#         'surname': 'valiyev',
+#         'b_day': 1999,
+#         'malumot': 'orta-maxsus',
+#         'languages': ['sql', 'php']
+#     },
+#     'olim': {
+#         'surname': 'husanov',
+#         'b_day': 1985,
+#         'malumot': 'maxsus',
+#         'languages': ['c#', 'ruby']
+#     }
+# }
+#
+# for name, info in collegues.items():
+#     print(f"{name.title()} {info['surname'].title()}, {info['b_day']}-yilda tug'ilgan. "
+#           f"Ma'lumoti: {info['malumot']}."
+#           f"Quyidagi dasturlash tillarini biladi: ")
+#     for lang in info['languages']:
+#         print(lang.upper())
+
+# HOMEWORK
+# 1. Assignment
+# mashhur_shaxs0 = {
+#     'name': 'imom al-buxoriy',
+#     'b_day': 1100,
+#     'major': 'hadith',
+#     'books': 'jome us-sahih'
+# }
+#
+# mashhur_shaxs1 = {
+#     'name': 'enshteyn',
+#     'b_day': 1890,
+#     'major': 'phisics',
+#     'books': 'einstein book'
+# }
+#
+# mashhur_shaxs2 = {
+#     'name': 'leonardo da-vinchi',
+#     'b_day': 1890,
+#     'major': 'phisics',
+#     'books': 'einstein book'
+# }
+#
+# mashhur_shaxs3 = {
+#     'name': 'stive jobs',
+#     'b_day': 1970,
+#     'major': 'computer engineer',
+#     'books': 'stive jobs'
+# }
+
+# literature = [mashhur_shaxs0, mashhur_shaxs1, mashhur_shaxs2, mashhur_shaxs3]
+# for celebriry in literature:
+#     print(f"{celebriry['name'].title()} {celebriry['b_day']}-yilda tug'ilgan. "
+#           f"U {celebriry['major'].title()} sohasida olim bo'lgan. "
+#           f"U {celebriry['books']} kitobini yozgan.")
+
+# 2. Assignment
+# for celebrity in literature:
+#     print(f"{celebrity['name'].title()} {celebrity['books'].title()} asarini yozgan.")
+
+# 3. Assignment
+# dostim = {
+#     'name': 'Siddiq',
+#     'b_day': 2007,
+#     'major': 'AI engineer',
+# }
+#
+# akam = {
+#     'name': 'Otabek',
+#     'b_day': 2003,
+#     'major': 'Flutter developer'
+# }
+#
+# ukam = {
+#     'name': 'Muhammadyusuf',
+#     'b_day': 2008,
+#     'major': 'Business analytic'
+# }
+# tanishlar = [dostim, ukam, akam]
+# movies = []
+#
+# print(f"3 ta eng sevimli kinoingizni yozing:")
+# for n in range(3):
+#     movies.append(input(f"{n+1}-kino: ").lower())
+#
+# for tanish in tanishlar:
+#     tanish['favorite_movies'] = movies
+#
+# for tanish in tanishlar:
+#     print(f"{tanish['name'].title()}ning sevimli kinolari:")
+#     for movie in tanish['favorite_movies']:
+#         print(movie.capitalize())
+
+# 4. Assignment
+countries = {
+    'uzbekistan': {
+        'capital': 'tashkent',
+        'population': 38_000_000,
+        'currency': "so'm",
+        'language': 'uzbek'
     },
-    'vali': {
-        'surname': 'valiyev',
-        'b_day': 1999,
-        'malumot': 'orta-maxsus',
-        'languages': ['sql', 'php']
+    'turkiya': {
+        'capital': 'istanbul',
+        'population': 85_000_000,
+        'currency': "lira",
+        'language': 'turk'
     },
-    'olim': {
-        'surname': 'husanov',
-        'b_day': 1985,
-        'malumot': 'maxsus',
-        'languages': ['c#', 'ruby']
+    'yaponiya': {
+        'capital': 'tokio',
+        'population': 125_000_000,
+        'currency': "iyena",
+        'language': 'yapon'
+    },
+    'germaniya': {
+        'capital': 'berlin',
+        'population': 83_000_000,
+        'currency': "yevro",
+        'language': 'nemis'
     }
 }
 
-for name, info in collegues.items():
-    print(f"{name.title()} {info['surname'].title()}, {info['b_day']}-yilda tug'ilgan. "
-          f"Ma'lumoti: {info['malumot']}."
-          f"Quyidagi dasturlash tillarini biladi: ")
-    for lang in info['languages']:
-        print(lang.upper())
+# for country, info in countries.items():
+#     print(f"{country.title()}ning poytaxti {info['capital'].title()}. "
+#           f"Aholi soni {info['population']} va pul birligi {info['currency']}. "
+#           f"Bu davlatning tili {info['language'].title()}.")
+
+query = input("Davlat nomini kiritib, u haqida ma'lumot oling: ").lower()
+
+if query in countries:
+    info = countries[query]
+    print(f"{query.title()}ning poytaxti {info['capital'].title()}. "
+          f"Aholi soni {info['population']} va pul birligi {info['currency']}. "
+          f"Bu davlatning tili {info['language'].title()}.")
+else:
+    print(f"Bizda {query} davlati haqida ma'lumot yo'q.")
+
+
+
