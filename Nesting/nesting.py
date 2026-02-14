@@ -40,10 +40,6 @@
 # print(f"{car['model'].title()}, "
 #       f"{car['color']} rang, "
 #       f"{car['year']}-yil, {car['price']}$")
-from unittest.mock import mock_open
-
-from django.template.smartif import infix
-from magic_filter.util import in_op
 
 # clean code
 # cars = [car0, car1, car2]
@@ -213,47 +209,47 @@ from magic_filter.util import in_op
 #         print(movie.capitalize())
 
 # 4. Assignment
-countries = {
-    'uzbekistan': {
-        'capital': 'tashkent',
-        'population': 38_000_000,
-        'currency': "so'm",
-        'language': 'uzbek'
-    },
-    'turkiya': {
-        'capital': 'istanbul',
-        'population': 85_000_000,
-        'currency': "lira",
-        'language': 'turk'
-    },
-    'yaponiya': {
-        'capital': 'tokio',
-        'population': 125_000_000,
-        'currency': "iyena",
-        'language': 'yapon'
-    },
-    'germaniya': {
-        'capital': 'berlin',
-        'population': 83_000_000,
-        'currency': "yevro",
-        'language': 'nemis'
-    }
-}
+# countries = {
+#     'uzbekistan': {
+#         'capital': 'tashkent',
+#         'population': 38_000_000,
+#         'currency': "so'm",
+#         'language': 'uzbek'
+#     },
+#     'turkiya': {
+#         'capital': 'istanbul',
+#         'population': 85_000_000,
+#         'currency': "lira",
+#         'language': 'turk'
+#     },
+#     'yaponiya': {
+#         'capital': 'tokio',
+#         'population': 125_000_000,
+#         'currency': "iyena",
+#         'language': 'yapon'
+#     },
+#     'germaniya': {
+#         'capital': 'berlin',
+#         'population': 83_000_000,
+#         'currency': "yevro",
+#         'language': 'nemis'
+#     }
+# }
 
 # for country, info in countries.items():
 #     print(f"{country.title()}ning poytaxti {info['capital'].title()}. "
 #           f"Aholi soni {info['population']} va pul birligi {info['currency']}. "
 #           f"Bu davlatning tili {info['language'].title()}.")
 
-query = input("Davlat nomini kiritib, u haqida ma'lumot oling: ").lower()
-
-if query in countries:
-    info = countries[query]
-    print(f"{query.title()}ning poytaxti {info['capital'].title()}. "
-          f"Aholi soni {info['population']} va pul birligi {info['currency']}. "
-          f"Bu davlatning tili {info['language'].title()}.")
-else:
-    print(f"Bizda {query} davlati haqida ma'lumot yo'q.")
+# query = input("Davlat nomini kiritib, u haqida ma'lumot oling: ").lower()
+#
+# if query in countries:
+#     info = countries[query]
+#     print(f"{query.title()}ning poytaxti {info['capital'].title()}. "
+#           f"Aholi soni {info['population']} va pul birligi {info['currency']}. "
+#           f"Bu davlatning tili {info['language'].title()}.")
+# else:
+#     print(f"Bizda {query} davlati haqida ma'lumot yo'q.")
 
 
 
