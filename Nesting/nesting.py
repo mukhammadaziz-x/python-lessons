@@ -251,5 +251,80 @@
 # else:
 #     print(f"Bizda {query} davlati haqida ma'lumot yo'q.")
 
+# PRACTICE
+# 1. Assignment
+# team = []
+# total_price = 0
+#
+# for i in range(5):
+#     player = {
+#         'name': 'Karim',
+#         'position': 'defender',
+#         'rating': None,
+#         'price': None
+#     }
+#     team.append(player)
+#
+# for player in team[:2]:
+#     player['position'] = 'attacker'
+#     player['price'] = 100_000_000
+#
+# for player in team[2:]:
+#     player['price'] = 50_000_000
+#     player['position'] = 'defender'
+#
+# for player in team:
+#     if player in team:
+#         total_price += player['price']
+#
+# print(total_price)
 
+# 2. Assignment
+# restaurant_menu = {
+#     'palov': {
+#         'price': 45000,
+#         'ingredients': ["go'sht", 'sabzi', 'guruch', "yog'"]
+#     },
+#     'kebab': {
+#         'price': 20000,
+#         'ingredients': ["go'sht", 'pomidor', 'limon', "qo'y yog'i"]
+#     },
+#     'mastava': {
+#         'price': 45000,
+#         'ingredients': ["go'sht", 'guruch', 'sabzi', 'kartoshka', "bulg'or qalampir"]
+#     },
+#     'narin': {
+#         'price': 45000,
+#         'ingredients': ["go'sht", 'qazi', 'hamr', 'ziravor']
+#     }
+# }
+#
+# query = input("Taom kiriting: ").lower()
+#
+# if query in restaurant_menu:
+#     print(f"Siz so'ragan {query.title()}ning narxi {restaurant_menu[query]['price']} so'm.")
+#     print(f"{query.title()}ning tarkibida:")
+#     for ing in restaurant_menu[query]['ingredients']:
+#         print(ing.capitalize(), end=' - ')
+# else:
+#     print("Afsuski, bizda bunday taom yo'q.")
+
+# 3. Assignment
+# library = {
+#     'badiiy': [{
+#         'name': "o'tkan kunlar",
+#         'author': 'abdulla qodiriy',
+#         'page': 560
+#     }],
+#     'ilmiy': [{
+#         'name': "qora pul",
+#         'author': 'george armstrong',
+#         'page': 380
+#     }]
+# }
+#
+# for janr, books in library.items():
+#     print(f"{janr.title()}:")
+#     for book in books:
+#         print(f'"{book["name"].capitalize()}", muallifi: {book["author"].title()}, {book["page"]} bet.')
 
