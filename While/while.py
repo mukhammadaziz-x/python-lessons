@@ -38,7 +38,24 @@
 #     else:
 #         print(float(value)**2)
 
+# print("Kiritilgan sonning kvadratini chiqaruvchi dastur.")
+# question = "Istalgan son kiriting "
+# question += "(dasturni to'xtatish uchun 'exit' deb yozing): "
+#
+# while True:
+#     value = input(question)
+#     if value == 'exit':
+#         break
+#     else:
+#         print(float(value)**2)
 
+
+# numbers = list(range(1, 11))
+# for num in numbers:
+#     if num == 5:
+#         break
+#     else:
+#         print(f"{num} ning kvadrati {num**2} ga teng.")
 
 
 
