@@ -57,9 +57,20 @@
 #     else:
 #         print(f"{num} ning kvadrati {num**2} ga teng.")
 
+# numbers = list(range(1, 11))
+# for num in numbers:
+#     if num == 5:
+#         continue
+#     else:
+#         print(f"{num} ning kvadrati {num**2} ga teng.")
 
-
-
+# num = 0
+# while num < 10:
+#     num += 1
+#     if num % 2 != 0:
+#         continue
+#     else:
+#         print(num)
 
 
 
