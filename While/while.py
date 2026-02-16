@@ -27,6 +27,7 @@
 #     if value != 'exit':
 #         print(float(value)**2)
 
+# SIGN
 # print("Kiritilgan sonning kvadratini chiqaruvchi dastur.")
 # question = "Istalgan son kiriting "
 # question += "(dasturni to'xtatish uchun 'exit' deb yozing): "
@@ -38,6 +39,7 @@
 #     else:
 #         print(float(value)**2)
 
+# BREAK
 # print("Kiritilgan sonning kvadratini chiqaruvchi dastur.")
 # question = "Istalgan son kiriting "
 # question += "(dasturni to'xtatish uchun 'exit' deb yozing): "
@@ -49,7 +51,6 @@
 #     else:
 #         print(float(value)**2)
 
-
 # numbers = list(range(1, 11))
 # for num in numbers:
 #     if num == 5:
@@ -57,6 +58,7 @@
 #     else:
 #         print(f"{num} ning kvadrati {num**2} ga teng.")
 
+# CONTINUE
 # numbers = list(range(1, 11))
 # for num in numbers:
 #     if num == 5:
@@ -71,4 +73,3 @@
 #         continue
 #     else:
 #         print(num)
-
