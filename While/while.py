@@ -102,3 +102,21 @@
 #         print(num)
 #     num += 1 # biz bu yerda bu qismni noto'g'ri yozdik, tepada yozilishi kerak edi.
 
+# num = 1
+# while num > 0:
+#     num += 1
+#     if num % 2 != 0:
+#         continue
+#     else:
+#         print(num)
+
+# HOMEWORK
+question = "Yaxshi ko'rgan kitoblaringizni kiriting "
+question += "(va 'stop' so'zini yozib dasturni yakunlang): "
+book = ''
+while book != 'stop':
+    book = input(question)
+    if book == 'stop':
+        print(f"Sizning yaxshi ko'rgan kitoblarinigiz: \n[{book}]")
+        print("Dastur to'xtadi.")
+
