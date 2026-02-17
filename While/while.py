@@ -73,3 +73,32 @@
 #         continue
 #     else:
 #         print(num)
+
+
+# Continue
+# num = 0
+# while num < 10:
+#     num += 1
+#     if num % 2 != 0:
+#         continue
+#     else:
+#         print(num)
+
+# infinite loop
+# num = 0
+# while num < 10:
+#     # num += 1 # biz buni yozishni unutdik.
+#     if num % 2 != 0:
+#         continue
+#     else:
+#         print(num)
+
+# num = 0
+# while num < 10:
+#     # bu yerda yozilishi kerak
+#     if num % 2 != 0:
+#         continue
+#     else:
+#         print(num)
+#     num += 1 # biz bu yerda bu qismni noto'g'ri yozdik, tepada yozilishi kerak edi.
+
