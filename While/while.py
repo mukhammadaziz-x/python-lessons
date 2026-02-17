@@ -124,21 +124,28 @@ from List.list import prices
 # 2. Assignment
 question = "Muzeyga kirish uchun yoshingizni ayting "
 question += "('quit' yoki 'exit' so'zini yozib dasturni yakunlang): "
-price = 0
-ticket = ''
+
 sign = True
 while sign:
-    ticket = input(question)
-    if int(ticket) <= 7:
-        price += 2000
-    elif int(ticket) <= 18:
-        price += 3000
-    elif int(ticket) >= 18:
-        price += 10000
-    elif int(ticket) <= 65:
-        price += 10000
-    else:
-        price = 0
-    print(f"Siz uchun kirish narhi {price}")
-    if ticket == 'quit' or 'exit':
+    ticket = input(question).lower()
+
+    if ticket == 'quit' or ticket == 'exit':
         print("Xaridingiz uchun rahmat!")
+        sign = False
+    else:
+        age = int(ticket)
+        if age <= 7:
+            price = 2000
+        elif age <= 18:
+            price = 3000
+        elif age < 65:
+            price = 10000
+        else:
+            price = 0
+
+        if price == 0:
+            print(f"Siz uchun kirish bepul!")
+        else:
+            print(f"Siz uchun kirish narhi {price} so'm")
+
+
