@@ -27,28 +27,28 @@
 
 # HOMEWORK
 # 1. Assignment
-names = ['Muhammadumar', 'Siddiq', 'Asadulloh', 'Muhammadali', 'Yahyoxon']
-for name in names:
-    print(f"What's up {name}?")
-print(f"Code repeated {len(names)} times.")
-
-# 2. Assignment
-numbers = list(range(9, 100, 2))
-for num in numbers:
-    print(f"The square of {num} is {num**2}")
-
-# 3. Assignment
-movies = []
-for mov in range(5):
-    movies.append(input(f"Enter your {mov+1} favorite movie: "))
-print(movies)
-
-# 4. Assignment
-meet_people = []
-how_many = int(input("How many people did you see/talk to today?: "))
-for p in range(how_many):
-    meet_people.append(input(f"Name of the {p+1}-person you met/talked to today: "))
-
-print(how_many)
-print(meet_people)
+# names = ['Muhammadumar', 'Siddiq', 'Asadulloh', 'Muhammadali', 'Yahyoxon']
+# for name in names:
+#     print(f"What's up {name}?")
+# print(f"Code repeated {len(names)} times.")
+#
+# # 2. Assignment
+# numbers = list(range(9, 100, 2))
+# for num in numbers:
+#     print(f"The square of {num} is {num**2}")
+#
+# # 3. Assignment
+# movies = []
+# for mov in range(5):
+#     movies.append(input(f"Enter your {mov+1} favorite movie: "))
+# print(movies)
+#
+# # 4. Assignment
+# meet_people = []
+# how_many = int(input("How many people did you see/talk to today?: "))
+# for p in range(how_many):
+#     meet_people.append(input(f"Name of the {p+1}-person you met/talked to today: "))
+#
+# print(how_many)
+# print(meet_people)
 

@@ -5,9 +5,6 @@
 #     print("Your entrance fee is 5,000 so'm")
 # else:
 #     print("Your entrance fee is 10,000 so'm")
-from traceback import print_tb
-
-from sqlparse.sql import Assignment
 
 # clean code
 # age = int(input("How old are you?: "))
@@ -196,7 +193,7 @@ from sqlparse.sql import Assignment
 #     print(f"Welcome {choose.title()}!")
 
 # 6. Assignment
-num = int(input("Enter the integer you want: "))
-for n in range(2, 11):
-    if not (num % n):
-        print(f"The number {num} is divisible by {n} without a remainder.")
+# num = int(input("Enter the integer you want: "))
+# for n in range(2, 11):
+#     if not (num % n):
+#         print(f"The number {num} is divisible by {n} without a remainder.")

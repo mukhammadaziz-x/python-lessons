@@ -4,7 +4,6 @@
 # # cars.sort(reverse=True)
 #
 # print(sorted(cars, reverse=True))
-from xxsubtype import bench
 
 # sorted
 # ages = [11, 12, 34, 65, 76, 84, 100]
@@ -113,22 +112,22 @@ from xxsubtype import bench
 # print(numbers[-20:])
 
 # Meals
-meals = ['hamburger', 'donary', 'lavash', 'hotdog', 'pizza', 'egg with sausages', 'omelette']
-breakfast = meals[:]
-print(breakfast)
-
-breakfast.remove('pizza')
-breakfast.remove('lavash')
-breakfast.remove('hotdog')
-breakfast.remove('donary')
-breakfast.remove('hamburger')
-
-breakfast.append('milk and cookies')
-breakfast.insert(2, 'bread with oil')
-breakfast.append('cottage cheese with strawberry')
-breakfast.insert(4, 'cake with chocolate')
-breakfast.insert(5, 'bread and cream')
+# meals = ['hamburger', 'donary', 'lavash', 'hotdog', 'pizza', 'egg with sausages', 'omelette']
+# breakfast = meals[:]
 # print(breakfast)
-
-breakfast = tuple(breakfast)
-print(breakfast)
+#
+# breakfast.remove('pizza')
+# breakfast.remove('lavash')
+# breakfast.remove('hotdog')
+# breakfast.remove('donary')
+# breakfast.remove('hamburger')
+#
+# breakfast.append('milk and cookies')
+# breakfast.insert(2, 'bread with oil')
+# breakfast.append('cottage cheese with strawberry')
+# breakfast.insert(4, 'cake with chocolate')
+# breakfast.insert(5, 'bread and cream')
+# # print(breakfast)
+#
+# breakfast = tuple(breakfast)
+# print(breakfast)

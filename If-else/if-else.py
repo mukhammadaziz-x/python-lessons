@@ -1,7 +1,6 @@
 # cars = ['audi', 'bmw', 'volvo', 'volkswagen', 'hyundai', 'honda', 'chevrolet']
 # for car in cars:
 #     print(car.title())
-from sqlparse.sql import Assignment
 
 # for car in cars:
 #     if car == 'bmw':
