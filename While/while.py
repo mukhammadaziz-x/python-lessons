@@ -1,6 +1,5 @@
 # name = input("What is your name?: ")
 # print(f"Hi, {name.title()}")
-from List.list import prices
 
 # name = input("What is your name?: ")
 # question = f"Hi {name.title()}. How old are you?: "
@@ -147,3 +146,21 @@ from List.list import prices
 #             print(f"Siz uchun kirish bepul!")
 #         else:
 #             print(f"Siz uchun kirish narhi {price} so'm")
+
+# 3. Assignment
+savol ="Kiritilgan sonning ildizini qaytaruvchi dastur.\n"
+savol += "Musbat son kiriting "
+savol += "(dasturni to'xtatish uchun 'exit' deb yozing): "
+
+while True:
+    qiymat = input(savol)
+    if qiymat == 'exit':
+        break
+
+    son = float(qiymat)
+
+    if son < 0:
+        continue
+    else:
+        ildiz = son**(0.5)
+        print(f"{son} ning ildizi {son} ga teng")
