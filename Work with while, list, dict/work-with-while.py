@@ -27,9 +27,11 @@
 # for name, age in friends.items():
 #     print(f"{name.title()} {age} yoshda.")
 
-cars = ['nexia', 'toyota', 'bmw', 'nexia', 'malibu', 'kia k5', 'nexia', 'rolls roys']
-car = 'nexia'
-while car in cars:
-    cars.remove(car)
+# cars = ['nexia', 'toyota', 'bmw', 'nexia', 'malibu', 'kia k5', 'nexia', 'rolls roys']
+# car = 'nexia'
+# while car in cars:
+#     cars.remove(car)
+#
+# print(cars)
 
-print(cars)
+
