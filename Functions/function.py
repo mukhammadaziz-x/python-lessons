@@ -104,10 +104,10 @@
 # solishtir(y=13, x=3)
 
 # 7. Assignment
-def tekshir(number):
-    """Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarni qoldiqsiz bo'linishini tekshiruvchi funksiya"""
-    for n in range(1, 11):
-        if not number % n:
-            print(f"{number} soni {n} ga qoldiqsiz bo'linadi")
-
-tekshir(41035707)
+# def tekshir(number):
+#     """Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarni qoldiqsiz bo'linishini tekshiruvchi funksiya"""
+#     for n in range(1, 11):
+#         if not number % n:
+#             print(f"{number} soni {n} ga qoldiqsiz bo'linadi")
+#
+# tekshir(41035707)
