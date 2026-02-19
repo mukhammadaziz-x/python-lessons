@@ -23,8 +23,15 @@
 #
 # fullname('muhammadaziz', 'xabibullayev')
 
-def yosh_hisobla(name, b_day):
-    """Foydalanuvchi yoshini hisoblaydigan dastur"""
-    print(f"{name.title()} {2026-b_day} yoshda.")
+# def yosh_hisobla(name, b_day):
+#     """Foydalanuvchi yoshini hisoblaydigan dastur"""
+#     print(f"{name.title()} {2026-b_day} yoshda.")
 
-yosh_hisobla('muhammadaziz', 2006)
+# yosh_hisobla('muhammadaziz', 2006)
+# yosh_hisobla(name='Abdulloh', b_day=2006)
+
+# def yosh_hisobla(b_day, cur_y=2026):
+#     """Foydalanuvchi tug'ilagan yilidan uning yoshini hisoblaydi"""
+#     print(f"Siz {cur_y-b_day} yoshdasiz.")
+#
+# yosh_hisobla(2006)
