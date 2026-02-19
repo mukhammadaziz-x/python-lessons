@@ -35,3 +35,11 @@
 #     print(f"Siz {cur_y-b_day} yoshdasiz.")
 #
 # yosh_hisobla(2006)
+
+# HOMEWORK
+# 1. Assignment
+def yosh_hisobla(name, age):
+    """Foydalanuvchi ismini va yoshini so'rab, unga tug'ilgan yilini chiqarib beruvchi funksiya"""
+    print(f"{name.title()} siz {2026-age}-yilda tug'ilgan ekansiz.")
+
+yosh_hisobla(name='akmalxon', age=20)
