@@ -38,17 +38,28 @@
 
 # HOMEWORK
 # 1. Assignment
-def yosh_hisobla(name, age):
-    """Foydalanuvchi ismini va yoshini so'rab, unga tug'ilgan yilini chiqarib beruvchi funksiya"""
-    print(f"{name.title()} siz {2026-age}-yilda tug'ilgan ekansiz.")
-
-yosh_hisobla(name='akmalxon', age=20)
+# def yosh_hisobla(name, age):
+#     """Foydalanuvchi ismini va yoshini so'rab, unga tug'ilgan yilini chiqarib beruvchi funksiya"""
+#     print(f"{name.title()} siz {2026-age}-yilda tug'ilgan ekansiz.")
+#
+# yosh_hisobla(name='akmalxon', age=20)
 
 # 2. Assignment
-def hisobla(number):
-    """Foydalanuvchidan son olib, uning kvadrati va kubini konsolga chiqaruvchi funksiya"""
-    print(f"{number} ning kvadrati {number**2} ga teng\n"
-          f"{number} ning kubi {number**3} ga teng")
+# def hisobla(number):
+#     """Foydalanuvchidan son olib, uning kvadrati va kubini konsolga chiqaruvchi funksiya"""
+#     print(f"{number} ning kvadrati {number**2} ga teng\n"
+#           f"{number} ning kubi {number**3} ga teng")
+#
+# hisobla(131)
+# hisobla(number=12)
 
-hisobla(131)
-hisobla(number=12)
+# 3. Assignment
+def juft_toq_chiqar(number):
+    """Foydalanuvchidan son qabul qilib, uni juft yoki toq ekanligini konsolga chiqaradigan funksiya"""
+    if number %2 == 0:
+        print(f"{number} juft son")
+    else:
+        print(f"{number} toq son")
+
+juft_toq_chiqar(71)
+
