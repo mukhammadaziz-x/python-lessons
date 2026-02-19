@@ -53,12 +53,13 @@ from supabase_auth import model
 #     print(f"{avto['color'].title()} {avto['model'].title()}, Narhi: {price}")
 
 # My own range function as rename oraliq()
-def oraliq(min, max):
-    numbers = []
-    while min < max:
-        numbers.append(min)
-        min += 1
-    return numbers
+# def oraliq(min, max):
+#     numbers = []
+#     while min < max:
+#         numbers.append(min)
+#         min += 1
+#     return numbers
+#
+# for num in oraliq(1, 31):
+#     print(num)
 
-for num in oraliq(1, 31):
-    print(num)
