@@ -34,13 +34,13 @@
 #
 # print(cars)
 
-students = ['akmalxon', 'jamshidbek', 'abdulloh', 'muhammadaziz', 'siddiq']
-graded_students = {}
-while students:
-    student = students.pop()
-    grade = input(f"{student.title()}ning bahosini kiriting: ")
-    print(f"{student.title()} baholandi!")
-    graded_students[student] = int(grade)
-
-for name, grade in graded_students.items():
-    print(f"{name.title()} bu semestrni {grade} bahoga tamomladi.")
+# students = ['akmalxon', 'jamshidbek', 'abdulloh', 'muhammadaziz', 'siddiq']
+# graded_students = {}
+# while students:
+#     student = students.pop()
+#     grade = input(f"{student.title()}ning bahosini kiriting: ")
+#     print(f"{student.title()} baholandi!")
+#     graded_students[student] = int(grade)
+#
+# for name, grade in graded_students.items():
+#     print(f"{name.title()} bu semestrni {grade} bahoga tamomladi.")
