@@ -91,13 +91,23 @@
 # solishtir(221, 241)
 
 # 6. Assignment
-def solishtir(x, y=2):
-    """Foydalanuvchidan x va y sonlarni olib, uni konsolga chiqaruvchi funksiya"""
-    if x > y:
-        print(f"{x} - {y} dan katta ekan.")
-    elif x == y:
-        print(f"{x} - {y} teng ekan.")
-    else:
-        print(f"{y} - {x} dan katta ekan.")
+# def solishtir(x, y=2):
+#     """Foydalanuvchidan x va y sonlarni olib, uni konsolga chiqaruvchi funksiya. y ga 2 sonni default holatda berib ko'rdim."""
+#     if x > y:
+#         print(f"{x} - {y} dan katta ekan.")
+#     elif x == y:
+#         print(f"{x} - {y} teng ekan.")
+#     else:
+#         print(f"{y} - {x} dan katta ekan.")
+#
+# solishtir(221)
+# solishtir(y=13, x=3)
 
-solishtir(221)
+# 7. Assignment
+def tekshir(number):
+    """Foydalanuvchidan son qabul qilib, sonni 2 dan 10 gacha bo'lgan sonlarni qoldiqsiz bo'linishini tekshiruvchi funksiya"""
+    for n in range(1, 11):
+        if not number % n:
+            print(f"{number} soni {n} ga qoldiqsiz bo'linadi")
+
+tekshir(41035707)
