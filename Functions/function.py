@@ -16,10 +16,15 @@
 # print(print.__doc__)
 # print(max.__doc__)
 
-def fullname(firstname, surname):
-    """Foydalanuvchini ism va familiyasini jamlab chiqaruvchi funksiya"""
-    print(f"Foydalanuvchi ismi: {firstname.title()}")
-    print(f"Foydalanuvchi familiyasi: {surname.title()}")
+# def fullname(firstname, surname):
+#     """Foydalanuvchini ism va familiyasini jamlab chiqaruvchi funksiya"""
+#     print(f"Foydalanuvchi ismi: {firstname.title()}")
+#     print(f"Foydalanuvchi familiyasi: {surname.title()}")
+#
+# fullname('muhammadaziz', 'xabibullayev')
 
-fullname('muhammadaziz', 'xabibullayev')
+def yosh_hisobla(name, b_day):
+    """Foydalanuvchi yoshini hisoblaydigan dastur"""
+    print(f"{name.title()} {2026-b_day} yoshda.")
 
+yosh_hisobla('muhammadaziz', 2006)
