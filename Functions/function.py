@@ -79,7 +79,19 @@
 # son_olchash(19, 132)
 
 # 5. Assignment
-def solishtir(x, y):
+# def solishtir(x, y):
+#     """Foydalanuvchidan x va y sonlarni olib, uni konsolga chiqaruvchi funksiya"""
+#     if x > y:
+#         print(f"{x} - {y} dan katta ekan.")
+#     elif x == y:
+#         print(f"{x} - {y} teng ekan.")
+#     else:
+#         print(f"{y} - {x} dan katta ekan.")
+#
+# solishtir(221, 241)
+
+# 6. Assignment
+def solishtir(x, y=2):
     """Foydalanuvchidan x va y sonlarni olib, uni konsolga chiqaruvchi funksiya"""
     if x > y:
         print(f"{x} - {y} dan katta ekan.")
@@ -88,4 +100,4 @@ def solishtir(x, y):
     else:
         print(f"{y} - {x} dan katta ekan.")
 
-solishtir(221, 241)
+solishtir(221)
