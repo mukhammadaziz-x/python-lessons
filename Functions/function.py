@@ -64,16 +64,28 @@
 # juft_toq_chiqar(71)
 
 # 4. Assignment
-def son_olchash(num1, num2):
-    """Foydalanuvchidan ikkita son qabul qilib,
-    ulardan qaysi biri kattaligini konsolga chiqarish,
-    sonlar teng bo'lsa 'Sonlar teng' deb chiqarish funksiyasi"""
-    if num1 > num2:
-        print(f"{num1} soni {num2} dan katta ekan.")
-    elif num1 == num2:
-        print(f"Sonlar teng!")
-    else:
-        print(f"{num2} soni {num1} dan katta ekan")
+# def son_olchash(num1, num2):
+#     """Foydalanuvchidan ikkita son qabul qilib,
+#     ulardan qaysi biri kattaligini konsolga chiqarish,
+#     sonlar teng bo'lsa 'Sonlar teng' deb chiqarish funksiyasi"""
+#     if num1 > num2:
+#         print(f"{num1} soni {num2} dan katta ekan.")
+#     elif num1 == num2:
+#         print(f"Sonlar teng!")
+#     else:
+#         print(f"{num2} soni {num1} dan katta ekan")
+#
+# son_olchash(8, 4)
+# son_olchash(19, 132)
 
-son_olchash(8, 4)
-son_olchash(19, 132)
+# 5. Assignment
+def solishtir(x, y):
+    """Foydalanuvchidan x va y sonlarni olib, uni konsolga chiqaruvchi funksiya"""
+    if x > y:
+        print(f"{x} - {y} dan katta ekan.")
+    elif x == y:
+        print(f"{x} - {y} teng ekan.")
+    else:
+        print(f"{y} - {x} dan katta ekan.")
+
+solishtir(221, 241)
