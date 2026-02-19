@@ -43,3 +43,12 @@ def yosh_hisobla(name, age):
     print(f"{name.title()} siz {2026-age}-yilda tug'ilgan ekansiz.")
 
 yosh_hisobla(name='akmalxon', age=20)
+
+# 2. Assignment
+def hisobla(number):
+    """Foydalanuvchidan son olib, uning kvadrati va kubini konsolga chiqaruvchi funksiya"""
+    print(f"{number} ning kvadrati {number**2} ga teng\n"
+          f"{number} ning kubi {number**3} ga teng")
+
+hisobla(131)
+hisobla(number=12)
