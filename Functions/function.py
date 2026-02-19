@@ -54,12 +54,12 @@
 # hisobla(number=12)
 
 # 3. Assignment
-def juft_toq_chiqar(number):
-    """Foydalanuvchidan son qabul qilib, uni juft yoki toq ekanligini konsolga chiqaradigan funksiya"""
-    if number %2 == 0:
-        print(f"{number} juft son")
-    else:
-        print(f"{number} toq son")
-
-juft_toq_chiqar(71)
+# def juft_toq_chiqar(number):
+#     """Foydalanuvchidan son qabul qilib, uni juft yoki toq ekanligini konsolga chiqaradigan funksiya"""
+#     if number %2 == 0:
+#         print(f"{number} juft son")
+#     else:
+#         print(f"{number} toq son")
+#
+# juft_toq_chiqar(71)
 
