@@ -94,46 +94,49 @@ from django.db.models.expressions import result
 
 # HOMEWORK
 # 1. Assignment
-customers = []
-def users(name, surname, age, b_year, b_place, email=None, phone=None):
-    user = {
-        'name': name,
-        'surname': surname,
-        'age': age,
-        'b_year': b_year,
-        'b_place': b_place,
-        'email': email,
-        'phone': phone
-    }
-    return user
+# customers = []
+# def users(name, surname, age, b_year, b_place, email=None, phone=None):
+#     """Mijoz haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
+#     user = {
+#         'name': name,
+#         'surname': surname,
+#         'age': age,
+#         'b_year': b_year,
+#         'b_place': b_place,
+#         'email': email,
+#         'phone': phone
+#     }
+#     return user
+#
+# while True:
+#     name = input("Ismingizni kiriting: ")
+#     surname = input("Familiyangizni kiriting: ")
+#     age = int(input("Yoshingizni kiriting: "))
+#     b_year = int(input("Tug'ilgan yilingizni kiriting: "))
+#     b_place = input("Tug'ilgan joyingizni kiriting: ")
+#
+#     email = input("Email qo'shasizmi? (yes/no): ")
+#     if email == 'yes':
+#         email = input("Emailingizni kiriting: ")
+#     else:
+#         print("Rahmat")
+#         email = "Noma'lum"
+#
+#     phone = input("Telefon raqam qo'shasizmi? (yes/no): ")
+#     if phone == 'yes':
+#         phone = input("Telefon raqamingizni kiriting: ")
+#     else:
+#         print("Rahmat")
+#         phone = "Noma'lum"
+#
+#     customers.append(users(name, surname, age, b_year, b_place, email, phone))
+#     result = input("Yana foydalanuvchi qo'shasizmi? (yes/no): ")
+#     if result == 'no':
+#         break
 
-while True:
-    name = input("Ismingizni kiriting: ")
-    surname = input("Familiyangizni kiriting: ")
-    age = int(input("Yoshingizni kiriting: "))
-    b_year = int(input("Tug'ilgan yilingizni kiriting: "))
-    b_place = input("Tug'ilgan joyingizni kiriting: ")
+# 2. Assignment
+# for user in customers:
+#     print(f"{user['name'].title()} {user['surname'].title()}, {user['age']} yoshda, ya'ni {user['b_year']} yilda tug'ilgan. "
+#           f"{user['name'].title()} {user['b_place'].capitalize()}da tavallud topgan. "
+#           f"Uning emaili: {user['email']}, va uning telefon raqami: {user['phone']}")
 
-    email = input("Email qo'shasizmi? (yes/no): ")
-    if email == 'yes':
-        email = input("Emailingizni kiriting: ")
-    else:
-        print("Rahmat")
-        email = "Noma'lum"
-
-    phone = input("Telefon raqam qo'shasizmi? (yes/no): ")
-    if phone == 'yes':
-        phone = input("Telefon raqamingizni kiriting: ")
-    else:
-        print("Rahmat")
-        phone = "Noma'lum"
-
-    customers.append(users(name, surname, age, b_year, b_place, email, phone))
-    result = input("Yana foydalanuvchi qo'shasizmi? (yes/no): ")
-    if result == 'no':
-        break
-
-for user in customers:
-    print(f"{user['name'].title()} {user['surname'].title()}, {user['age']} yoshda, ya'ni {user['b_year']} yilda tug'ilgan. "
-          f"{user['name'].title()} {user['b_place'].capitalize()}da tavallud topgan. "
-          f"Uning emaili: {user['email']}, va uning telefon raqami: {user['phone']}")
