@@ -11,10 +11,12 @@
 # print(grades)
 # print(students)
 
-def katta_harf(mantlar):
-    for i in range(len(mantlar)):
-        mantlar[i] = mantlar[i].title()
-
-names = ['ali', 'vali', 'akmalxon', 'siddiq', 'muhammadaziz']
-katta_harf(names)
-print(names)
+# HOMEWORK
+# 1. Assignment
+# def katta_harf(mantlar):
+#     for i in range(len(mantlar)):
+#         mantlar[i] = mantlar[i].title()
+#
+# names = ['ali', 'vali', 'akmalxon', 'siddiq', 'muhammadaziz']
+# katta_harf(names)
+# print(names)
