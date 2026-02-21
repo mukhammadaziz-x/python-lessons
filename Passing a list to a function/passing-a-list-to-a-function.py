@@ -7,6 +7,6 @@ def bahola(names):
     return grades
 
 students = ['ali', 'vali', 'akmalxon', 'siddiq', 'muhammadaziz']
-grades = bahola(students)
+grades = bahola(students[:])
 print(grades)
 print(students)
