@@ -22,12 +22,12 @@
 # print(names)
 
 # 2. Assignment
-def katta_harf(mantlar):
-    for i in range(len(mantlar)):
-        mantlar[i] = mantlar[i].title()
-
-names = ['ali', 'vali', 'akmalxon', 'siddiq', 'muhammadaziz']
-names2 = names[:]
-katta_harf(names2)
-print(names2)
-print(names)
+# def katta_harf(mantlar):
+#     for i in range(len(mantlar)):
+#         mantlar[i] = mantlar[i].title()
+#
+# names = ['ali', 'vali', 'akmalxon', 'siddiq', 'muhammadaziz']
+# names2 = names[:]
+# katta_harf(names2)
+# print(names2)
+# print(names)
