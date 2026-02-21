@@ -19,3 +19,13 @@
 #
 # print(avto1)
 # print(avto2)
+
+# HOMEWORK
+# 1. Assignment
+def kopaytir(*sonlar):
+    """Istalgancha sonlarni qabul qilib, ularni ko'paytmasini qaytaruvchi funksiya"""
+    kopaytma = 1
+    for son in sonlar:
+        kopaytma *= son
+    return kopaytma
+print(kopaytir(5, 5))
