@@ -140,3 +140,18 @@ from django.db.models.expressions import result
 #           f"{user['name'].title()} {user['b_place'].capitalize()}da tavallud topgan. "
 #           f"Uning emaili: {user['email']}, va uning telefon raqami: {user['phone']}")
 
+# 3. Assignment
+def eng_kattasini_top(a, b, c):
+    if a >= b and a >= c:
+        return a
+    elif b >= a and b >= c:
+        return b
+    else:
+        return c
+
+son1 = int(input("1-sonni kiriting: "))
+son2 = int(input("2-sonni kiriting: "))
+son3 = int(input("3-sonni kiriting: "))
+
+result = eng_kattasini_top(son1, son2, son3)
+print(f"Eng katta son: {result}")
