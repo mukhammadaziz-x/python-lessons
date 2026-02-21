@@ -31,11 +31,11 @@
 # print(kopaytir(5, 5))
 
 # 2. Assignment
-def student_info(name, surname, **informations):
-    """Talaba haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
-    informations['name'] = name
-    informations['surname'] = surname
-    return informations
-
-student1 = student_info('muhammadaziz', 'xabibullayev', age=20, b_year=2006, hobby='coding')
-print(student1)
+# def student_info(name, surname, **informations):
+#     """Talaba haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
+#     informations['name'] = name
+#     informations['surname'] = surname
+#     return informations
+#
+# student1 = student_info('muhammadaziz', 'xabibullayev', age=20, b_year=2006, hobby='coding')
+# print(student1)
