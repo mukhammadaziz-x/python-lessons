@@ -3,6 +3,7 @@
 # from avto_info_mod import avto_info, info_print
 # from avto_info_mod import avto_info as ainfo, info_print as iprint
 # from avto_info_mod import *
+import math
 
 # avto1 = avto_info_mod.avto_info('gm', 'malibu', 'oq', 'avtomat', 2020, 24500)
 # avto_info_mod.info_print(avto1)
@@ -18,3 +19,10 @@
 
 # avto5 = avto_info('chevrolet', 'comaro', 'qora', 'avtomat', 2023, 70000)
 # info_print(avto5)
+
+x = 400
+print(math.sqrt(x))
+print(math.pow(5, 3))
+print(math.pi) # 3.141592653589793
+print(math.log2(8))
+print(math.log10(100))
