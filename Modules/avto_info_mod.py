@@ -30,7 +30,7 @@ def avto_kirit():
             break
         return avtolar
 
-def avto_print(avto_info):
+def info_print(avto_info):
     """Avtomobillar haqida ma'lumotlar saqlangan lug'atni konsolga chiqaruvchi funksiya"""
     print(f"{avto_info['color'].title()} {avto_info['company'].upper()} "
           f"{avto_info['model'].upper()}, {avto_info['box']} korobka, "
