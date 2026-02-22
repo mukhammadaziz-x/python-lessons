@@ -50,11 +50,17 @@
 import random as r
 
 # Sample metodi yordamida tasodifiy raqamlarni saralab oldik, hamda juftmi() funksiyasini yaratib, filter() metodi yordamida ro'yxatdagi sonlarning juftlarini chiqardik.
-sonlar = r.sample(range(100), 10)
-print(sonlar)
-def juftmi(x):
-    """x juft bo'lsa True, aks holda False qaytaruvchi funksiya"""
-    return x % 2 == 0
+# sonlar = r.sample(range(100), 10)
+# print(sonlar)
+# def juftmi(x):
+#     """x juft bo'lsa True, aks holda False qaytaruvchi funksiya"""
+#     return x % 2 == 0
+#
+# juft_sonlar = list(filter(juftmi, sonlar))
+# print(juft_sonlar)
 
-juft_sonlar = list(filter(juftmi, sonlar))
+# Tepadagi huddi shu kodni lambda va filter yordamida qisqartirib chiqardik.
+sonlar = r.sample(range(100), 10)
+juft_sonlar = list(filter(lambda x: x%2==0, sonlar))
+print(sonlar)
 print(juft_sonlar)
