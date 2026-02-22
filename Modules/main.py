@@ -29,5 +29,17 @@ import random as r
 # print(math.log10(100))
 
 # randint()
-son = r.randint(0, 5)
-print(son)
+# son = r.randint(0, 5)
+# print(son)
+
+
+
+# choice()
+names = ['ali', 'hasan', 'husan', 'akmalxon', 'jamshidbek', 'siddiq', 'muhammadaziz']
+name = r.choice(names)
+print(name)
+print(r.choice(name))
+
+x = list(range(0, 51, 5))
+print(x)
+print(r.choice(x))
