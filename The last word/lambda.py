@@ -66,9 +66,17 @@ import random as r
 # print(juft_sonlar)
 
 # Biz lambda funksiyasidan foydalanyapmiz, filter funkisyasida nafaqat sonlar balki matnlarni ham filterlasak bo'ladi.
-sonlar = r.sample(range(100), 10)
-juft_sonlar = list(filter(lambda x: x%2==0, sonlar))
-mevalar = ['olma','olcha','gilos','apelsin','mandarin','ananas','tarvuz']
-harf = ''
-mevalar_b = list(filter(lambda meva: meva.startswith(harf), mevalar))
-print(mevalar_b)
+# sonlar = r.sample(range(100), 10)
+# juft_sonlar = list(filter(lambda x: x%2==0, sonlar))
+# mevalar = ['olma','olcha','gilos','apelsin','mandarin','ananas','tarvuz']
+# harf = 'a'
+# mevalar_b = list(filter(lambda meva: meva.startswith(harf), mevalar))
+# print(mevalar_b)
+
+# mevalar = ['olma','olcha','gilos','apelsin','mandarin','ananas','tarvuz']
+# mevalar2 = list(filter(lambda meva: len(meva)<=5, mevalar))
+# print(mevalar2)
+
+# mevalar = ['olma','olcha','gilos','apelsin','mandarin','ananas','tarvuz']
+# mevalar2 = list(filter(lambda meva:(meva.startswith('m') and meva.endswith('n')), mevalar))
+# print(mevalar2)
