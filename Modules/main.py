@@ -4,7 +4,7 @@
 # from avto_info_mod import avto_info as ainfo, info_print as iprint
 # from avto_info_mod import *
 # import math
-import random as r
+# import random as r
 
 # avto1 = avto_info_mod.avto_info('gm', 'malibu', 'oq', 'avtomat', 2020, 24500)
 # avto_info_mod.info_print(avto1)
@@ -31,8 +31,6 @@ import random as r
 # randint()
 # son = r.randint(0, 5)
 # print(son)
-
-
 
 # choice()
 # names = ['ali', 'hasan', 'husan', 'akmalxon', 'jamshidbek', 'siddiq', 'muhammadaziz']
