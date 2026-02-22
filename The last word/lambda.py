@@ -15,6 +15,17 @@ from math import sqrt
 # print(f"3-ning kvadrati {kvadrat(3)} ga, "
 #       f"kubi {kub(3)} ga teng")
 
+# sonlar = list(range(11))
+# ildizlar = list(map(sqrt, sonlar))
+# print(ildizlar)
+
+def daraja2(x):
+    """Berilgan sonning kvadratini qaytaruvchi funksiya"""
+    return x * x
+
+# print(daraja2(5))
+
 sonlar = list(range(11))
 ildizlar = list(map(sqrt, sonlar))
-print(ildizlar)
+
+print(list(map(daraja2, sonlar)))
