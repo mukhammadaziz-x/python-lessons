@@ -44,10 +44,8 @@ import random as r
 # print(x)
 # print(r.choice(x))
 
-
-
 # shuffle
-x = list(range(11))
-print(x)
-r.shuffle(x)
-print(x)
+# x = list(range(11))
+# print(x)
+# r.shuffle(x)
+# print(x)
