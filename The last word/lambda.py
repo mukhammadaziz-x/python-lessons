@@ -60,7 +60,15 @@ import random as r
 # print(juft_sonlar)
 
 # Tepadagi huddi shu kodni lambda va filter yordamida qisqartirib chiqardik.
+# sonlar = r.sample(range(100), 10)
+# juft_sonlar = list(filter(lambda x: x%2==0, sonlar))
+# print(sonlar)
+# print(juft_sonlar)
+
+# Biz lambda funksiyasidan foydalanyapmiz, filter funkisyasida nafaqat sonlar balki matnlarni ham filterlasak bo'ladi.
 sonlar = r.sample(range(100), 10)
 juft_sonlar = list(filter(lambda x: x%2==0, sonlar))
-print(sonlar)
-print(juft_sonlar)
+mevalar = ['olma','olcha','gilos','apelsin','mandarin','ananas','tarvuz']
+harf = ''
+mevalar_b = list(filter(lambda meva: meva.startswith(harf), mevalar))
+print(mevalar_b)
