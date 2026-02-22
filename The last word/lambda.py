@@ -1,5 +1,5 @@
 # import math
-from math import sqrt
+# from math import sqrt
 
 # uzunlik = lambda pi, r: 2 * pi * r
 # print(uzunlik(math.pi, 10))
@@ -35,9 +35,26 @@ from math import sqrt
 # kvadratlar = list(map(lambda x: x*x, sonlar))
 # print(kvadratlar)
 
-# Agar labmda funksiyasini ishlatmasdan kod yozganimizda bunday ko'rinishda bo'lar edi.
-sonlar = list(range(11))
-kvadratlar = []
-for son in sonlar:
-    kvadratlar.append(son * son)
-print(kvadratlar)
+# # Agar labmda funksiyasini ishlatmasdan kod yozganimizda bunday ko'rinishda bo'lar edi.
+# sonlar = list(range(11))
+# kvadratlar = []
+# for son in sonlar:
+#     kvadratlar.append(son * son)
+# print(kvadratlar)
+
+# a = [4, 5, 6]
+# b = [7, 8, 9]
+# a_plus_b = list(map(lambda x,y: x+y, a, b))
+# print(a_plus_b)
+
+import random as r
+
+# Sample metodi yordamida tasodifiy raqamlarni saralab oldik, hamda juftmi() funksiyasini yaratib, filter() metodi yordamida ro'yxatdagi sonlarning juftlarini chiqardik.
+sonlar = r.sample(range(100), 10)
+print(sonlar)
+def juftmi(x):
+    """x juft bo'lsa True, aks holda False qaytaruvchi funksiya"""
+    return x % 2 == 0
+
+juft_sonlar = list(filter(juftmi, sonlar))
+print(juft_sonlar)
