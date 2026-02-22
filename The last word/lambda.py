@@ -30,7 +30,14 @@ from math import sqrt
 #
 # print(list(map(daraja2, sonlar)))
 
-# Lambda yordamida ro'yxat ichidagi sonlar kvadratini qaytardik.
+# # Lambda yordamida ro'yxat ichidagi sonlar kvadratini qaytardik.
+# sonlar = list(range(11))
+# kvadratlar = list(map(lambda x: x*x, sonlar))
+# print(kvadratlar)
+
+# Agar labmda funksiyasini ishlatmasdan kod yozganimizda bunday ko'rinishda bo'lar edi.
 sonlar = list(range(11))
-kvadratlar = list(map(lambda x: x*x, sonlar))
+kvadratlar = []
+for son in sonlar:
+    kvadratlar.append(son * son)
 print(kvadratlar)
