@@ -35,11 +35,19 @@ import random as r
 
 
 # choice()
-names = ['ali', 'hasan', 'husan', 'akmalxon', 'jamshidbek', 'siddiq', 'muhammadaziz']
-name = r.choice(names)
-print(name)
-print(r.choice(name))
+# names = ['ali', 'hasan', 'husan', 'akmalxon', 'jamshidbek', 'siddiq', 'muhammadaziz']
+# name = r.choice(names)
+# print(name)
+# print(r.choice(name))
+#
+# x = list(range(0, 51, 5))
+# print(x)
+# print(r.choice(x))
 
-x = list(range(0, 51, 5))
+
+
+# shuffle
+x = list(range(11))
 print(x)
-print(r.choice(x))
+r.shuffle(x)
+print(x)
