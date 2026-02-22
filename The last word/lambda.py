@@ -19,13 +19,18 @@ from math import sqrt
 # ildizlar = list(map(sqrt, sonlar))
 # print(ildizlar)
 
-def daraja2(x):
-    """Berilgan sonning kvadratini qaytaruvchi funksiya"""
-    return x * x
-
+# # Map metodi yordamida, hamda o'zimiz yaratib olgan daraja2() funksiyasi bilan ro'yxat ichidagi sonlar kvadratini qaytardik.
+# def daraja2(x):
+#     """Berilgan sonning kvadratini qaytaruvchi funksiya"""
+#     return x * x
 # print(daraja2(5))
 
-sonlar = list(range(11))
-ildizlar = list(map(sqrt, sonlar))
+# sonlar = list(range(11))
+# ildizlar = list(map(sqrt, sonlar))
+#
+# print(list(map(daraja2, sonlar)))
 
-print(list(map(daraja2, sonlar)))
+# Lambda yordamida ro'yxat ichidagi sonlar kvadratini qaytardik.
+sonlar = list(range(11))
+kvadratlar = list(map(lambda x: x*x, sonlar))
+print(kvadratlar)
