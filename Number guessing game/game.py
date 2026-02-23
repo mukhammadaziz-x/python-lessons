@@ -1,43 +1,57 @@
-import random as r
+import random
 
-from django.db.models.expressions import result
-
-print("Keling o'ylagan sonni topish o'ynaymiz!")
-def son_top(x):
-    son = r.randint(1, x)
-    return son
-tax_son = son_top(10)
-
-while True:
-    son = int(input("1 dan 10 gacha son o'yladim. Topa olasizmi?:\n>>"))
-    for urunish in range(10):
-        urunish += 1
-        if son == tax_son:
-            print(f"TOPDINGIZ! {tax_son} sonini o'ylagan edim. {urunish} ta tahmin bilan topdingiz. Tabriklayman!")
-            break
-        elif tax_son > son:
-            son = int(input(f"Xato, men o'ylagan son bundan kattaroq. Yana xarakat qiling:\n>>"))
+def son_top(x=10):
+    tasodifiy_son = random.randint(1, x)
+    print(f"Men 1 dan {x} gacha son o'yladim. Topa olasizmi?")
+    taxminlar = 0
+    while True:
+        taxminlar += 1
+        taxmin = int(input(">>>"))
+        if taxmin < tasodifiy_son:
+            print(f"Xato. Men o'ylagan son bundan kattaroq. Yana xarakat qiling: ")
+        elif taxmin > tasodifiy_son:
+            print("Xato men o'ylagan son bundan kichikroq. Yana xarakat qiling: ")
         else:
-            son = int(input(f"Xato, men o'ylagan son bundan kichikroq. Yana xarakat qiling:\n>>"))
-    print(f"1 dan 10 gacha son o'ylang. Men topishga xarakat qilaman.")
-    for pc_urunish in range(10):
-        pc_urunish += 1
-        son = int(input("Son o'ylagan bo'lsangiz istalgan tugmani bosing:\n>>"))
-        pc_son = input(f"Siz {tax_son} sonini o'yladingiz: to'g'ri (T), men o'ylagan son bundan kattaroq (+), yoki kichikroq (-)??\n>>")
-        if pc_son == '-':
-            pc_son = input(f"Siz {tax_son-1} sonini o'yladingiz: to'g'ri (T), men o'ylagan son bundan kattaroq (+), yoki kichikroq (-)??\n>>")
-            continue
-        if pc_son == '+':
-            pc_son = input(f"Siz {tax_son+1} sonini o'yladingiz: to'g'ri (T), men o'ylagan son bundan kattaroq (+), yoki kichikroq (-)??\n>>")
-            continue
-        if pc_son == 't':
-            print(f"Soningizni {pc_urunish} urunish bilan topdim!")
             break
-    result = input("Yana o'ynaymizmi: ha(1) / yo'q (0): ")
-    if result != 'ha':
-        break
+    print(f"Tabriklaymiz. {taxminlar} ta taxmin bilan topdingiz!")
+    return taxminlar
 
+def sontop_pc(x=10):
+    input(f"1 dan {x} gacha son o'ylang va istalgan tugmani bosing. Men topaman.")
+    quyi = 1
+    yuqori = x
+    taxminlar = 0
+    while True:
+        taxminlar += 1
+        if quyi != yuqori:
+            taxmin = random.randint(quyi, yuqori)
+        else:
+            taxmin = quyi
+        javob = input(f"Siz {taxmin} sonini o'yladingiz: to'g'ri (t), "
+                      f"men o'ylagan son bundan kattaroq (+), yoki kichikroq (-).".lower())
+        if javob == '-':
+            yuqori = taxmin - 1
+        elif javob == '+':
+            quyi = taxmin + 1
+        else:
+            break
+    print(f"Men {taxminlar} ta taxmin bilan topdim!")
+    return taxminlar
 
+def play(x=10):
+    yana = True
+    while yana:
+        taxminlar_user = son_top(x)
+        taxminlar_pc = sontop_pc(x)
 
+        if taxminlar_user > taxminlar_pc:
+            print(f"Men yutdim!")
+        elif taxminlar_user < taxminlar_pc:
+            print(f"Siz yutdingiz. Tabriklayman!")
+        else:
+            print(f"Durrang! Ikkalamiz ham {taxminlar_user} urunishda durrang bo'ldik.")
 
+        yana = int(input("Yana o'ynaysizmi? Ha (1) / Yo'q (0): "))
+    print("O'yin uchun rahmat!")
 
+play()
