@@ -35,8 +35,8 @@ class MockCustomer:
 def run_tests():
     try:
         process_order(None)
-    except Exception as e:
-        print(f"Test 1 passed. Error: {e}")
+    except Exception as error:
+        print(f"Test 1 passed. Error: {error}")
 
     customer = MockCustomer(is_active=True, email="muhammadazizxabibullayev@gmail.com")
     order = MockOrder(is_paid=True, has_items=True, customer=customer)
