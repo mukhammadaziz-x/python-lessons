@@ -1,5 +1,3 @@
-from django.db.models.expressions import result
-
 from transliterate import to_cyrillic, to_latin
 import telebot
 
