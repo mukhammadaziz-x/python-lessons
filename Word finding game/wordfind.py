@@ -19,7 +19,7 @@ def display(user_letters, word):
 
 def play():
     word = get_word()
-    # Sozdagi harflar
+    # So'zdagi harflar
     word_letters = set(word)
     # Foydalanuvchi kiritgan harflar
     user_letters = ''
