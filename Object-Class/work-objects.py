@@ -63,7 +63,7 @@ class Subject:
         # talabalar = []
         # for x in self.students:
         #     talabalar.append(x.get_fullname())
-        # return talabalar
+        # return talabalar # Hardest method
 
 math = Subject('Math')
 student1 = Student('Muhammadaziz', 'Xabibullayev', 2006)
