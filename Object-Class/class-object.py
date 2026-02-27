@@ -41,3 +41,28 @@
 # print(student2.get_name())
 # print(student2.get_lastname())
 # print(student2.get_age(2026))
+
+# HOMEWORK
+# 1. Assignment
+class User:
+    def __init__(self, name, username, email, password):
+        self.name = name
+        self.username = username
+        self.email = email
+        self.password = password
+
+    def get_name(self):
+        return self.name
+
+    def get_username(self):
+        return self.username
+
+    def get_email(self):
+        return self.email
+
+    def get_password(self):
+        return self.password
+
+user1 = User('muhammadaziz', 'mukhammadaziz-x', 'muhammadazizxabibullayev@gmail.com', 'vdf3%d#fd*$0')
+user2 = User('abdulloh', 'abdulloh', 'abdulloh@gmail.com', 'vdf3%d#fdf2$0')
+user3 = User('muhammadyusuf', 'mukhammadaziz-x', 'muhammad-yusuf@gmail.com', 'v3gdf3%fd*$0')
