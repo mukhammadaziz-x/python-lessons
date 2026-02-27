@@ -65,6 +65,12 @@ class Subject:
         #     talabalar.append(x.get_fullname())
         # return talabalar # Hardest method
 
+    def get_students_num(self):
+        return self.student_count
+
+def see_methods(klass):
+    return [method for method in dir(klass) if not method.startswith('__')]
+
 math = Subject('Math')
 student1 = Student('Muhammadaziz', 'Xabibullayev', 2006)
 student2 = Student('Yaxyo', 'Anvarov', 2008)
@@ -73,9 +79,13 @@ math.add_student(student1)
 math.add_student(student2)
 math.add_student(student3)
 
-print(math.get_student())
+# print(math.get_student())
 
 # print(math.students)
 # print(math.student_count)
 
 # print(math.students[0].get_info())
+
+print(student1.__dict__)
+print(student1.__dict__.keys())
+print(see_methods(student1))
