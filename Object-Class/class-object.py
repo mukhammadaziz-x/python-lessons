@@ -67,5 +67,10 @@ class User:
         return f"Foydalanuvchi: {self.username}, ismi: {self.name}, email {self.email}"
 
 user1 = User('muhammadaziz', 'mukhammadaziz-x', 'muhammadazizxabibullayev@gmail.com', 'vdf3%d#fd*$0')
-user2 = User('abdulloh', 'abdulloh', 'abdulloh@gmail.com', 'vdf3%d#fdf2$0')
+user2 = User('abdulloh', 'abdulloh-ibn-hakim', 'abdulloh@gmail.com', 'vdf3%d#fdf2$0')
 user3 = User('muhammadyusuf', 'mukhammadaziz-x', 'muhammad-yusuf@gmail.com', 'v3gdf3%fd*$0')
+
+print(user2.email)
+print(user2.name)
+print(user2.username)
+print(user2.password)
