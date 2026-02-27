@@ -39,4 +39,5 @@ student3 = Student('Yaxyo', 'Anvarov', 2008)
 
 print(student2.tanishtir())
 print(student2.get_name())
-print(student2.get_age(2026 ))
+print(student2.get_lastname())
+print(student2.get_age(2026))
