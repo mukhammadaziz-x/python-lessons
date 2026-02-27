@@ -63,6 +63,9 @@ class User:
     def get_password(self):
         return self.password
 
+    def get_info(self):
+        return f"Foydalanuvchi: {self.username}, ismi: {self.name}, email {self.email}"
+
 user1 = User('muhammadaziz', 'mukhammadaziz-x', 'muhammadazizxabibullayev@gmail.com', 'vdf3%d#fd*$0')
 user2 = User('abdulloh', 'abdulloh', 'abdulloh@gmail.com', 'vdf3%d#fdf2$0')
 user3 = User('muhammadyusuf', 'mukhammadaziz-x', 'muhammad-yusuf@gmail.com', 'v3gdf3%fd*$0')
