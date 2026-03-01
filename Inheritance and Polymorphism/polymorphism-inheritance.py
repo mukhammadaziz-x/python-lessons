@@ -23,10 +23,7 @@ class Student(Shaxs):
         self.level = 1
         self.subjects = []
 
-    def get_info(self):
-        info = f"{self.name} {self.surname}. "
-        info += f"{self.get_level()}-bosqish, ID: {self.get_id()}"
-        return info
+
 
     def fanga_yozil(self):
         return self.subjects
