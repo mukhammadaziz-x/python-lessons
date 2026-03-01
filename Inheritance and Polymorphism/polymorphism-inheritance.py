@@ -30,6 +30,13 @@ class Student(Shaxs):
         else:
             print("Bu fan emas!")
 
+    def get_info(self):
+        info = f"{self.name} {self.surname}. "
+        info += f"Passport: {self.passport}, {self.b_year}-yilda tug'ilgan. "
+        info += f"Student ID: {self.student_id}. "
+        info += f"{self.name} O'zbekiston {self.address.region} shahrida tug'ilgan. U hozirda {self.address.district} tumani, {self.address.street} ko'chasida {self.address.home}-uyda yashab kelmoqda."
+        return info
+
     def remove_fan(self, fan_nomi):
         topildi = False
         for fan in self.subjects:
@@ -78,7 +85,8 @@ dasturlash = Subject('Python dasturlash')
 address1 = Address(49, 'Objuvoz', "Xamdo'stlik", 'Andijan')
 
 # Talaba yaratamiz
-student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', 'Andijan')
+student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', address1)
+print(student1.get_info())
 
 # Fanga yozilamiz
 student1.fanga_yozil(math)
