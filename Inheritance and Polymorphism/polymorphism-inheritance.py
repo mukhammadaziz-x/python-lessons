@@ -90,9 +90,3 @@ student1.remove_fan('Tarix')
 # Professor yaratamiz
 professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD', 'Stanford')
 print(professor1.get_info())
-
-student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
-print(student1.address.get_address())
-
-
-
