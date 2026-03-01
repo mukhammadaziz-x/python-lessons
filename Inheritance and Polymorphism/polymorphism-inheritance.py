@@ -23,16 +23,27 @@ class Student(Shaxs):
         self.level = 1
         self.subjects = []
 
-
-
-    def fanga_yozil(self):
-        return self.subjects
-
-    def remove_fan(self, fan):
-        if fan not in self.subjects:
-            print(f"Siz bu fanga yozilmagansiz.")
+    def fanga_yozil(self, fan_obyekti):
+        if fan_obyekti not in (fan_obyekti, Subject):
+            self.subjects.append(fan_obyekti)
+            print(f"{fan_obyekti.name} fani qo'shildi")
         else:
-            return self.subjects.remove(fan)
+            print("Bu fan emas!")
+
+    def remove_fan(self, fan_nomi):
+        topildi = False
+        for fan in self.subjects:
+            if fan.name == fan_nomi:
+                self.subjects.remove(fan)
+                topildi = True
+                print(f"{fan_nomi} o'chirildi.")
+                break
+
+        if not topildi:
+            print("Siz bu fanga yozilmagansiz.")
+
+    def get_subjects(self):
+        return [fan.name for fan in self.subjects]
 
 class Address:
     def __init__(self, home, street, district, region):
@@ -45,11 +56,6 @@ class Address:
         address = f"{self.region} viloyati, {self.district} tumani, "
         address += f"{self.street} ko'chasi, {self.home}-uy."
         return address
-
-student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
-
-student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', student1_address)
-print(student1.address.get_address())
 
 # HOMEWORK
 # 1. Assignment
@@ -79,3 +85,8 @@ class School(Address):
 
 school1 = School('Harvard', 4, 3, )
 professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD Standford school of Medicine')
+
+
+student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
+student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', student1_address)
+print(student1.address.get_address())
