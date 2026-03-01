@@ -24,9 +24,9 @@ class Student(Shaxs):
         self.subjects = []
 
     def fanga_yozil(self, fan_obyekti):
-        if fan_obyekti not in (fan_obyekti, Subject):
+        if fan_obyekti in (fan_obyekti, Subject):
             self.subjects.append(fan_obyekti)
-            print(f"{fan_obyekti.name} fani qo'shildi")
+            print(f"{fan_obyekti.name} fani qo'shildi!")
         else:
             print("Bu fan emas!")
 
