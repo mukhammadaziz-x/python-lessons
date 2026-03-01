@@ -10,14 +10,18 @@ class Shaxs:
         info += f"Passport: {self.passport}, {self.b_year}-yilda tug'ilgan."
         return info
 
-    def get_age(self, year):
-        return year - self.b_year
+class Subject:
+    def __init__(self, name):
+        self.name = name
+
 
 class Student(Shaxs):
-    def __init__(self, name, surname, passport, b_day, id):
-        super().__init__(name, surname, passport, b_day)
-        self.id = id
+    def __init__(self, name, surname, passport, b_year, student_id, address):
+        super().__init__(name, surname, passport, b_year)
+        self.student_id = student_id
+        self.address = address
         self.level = 1
+        self.subjects = []
 
     def get_id(self):
         return self.id
@@ -30,7 +34,57 @@ class Student(Shaxs):
         info += f"{self.get_level()}-bosqish, ID: {self.get_id()}"
         return info
 
-student = Student('Muhammadaziz', 'Xabibullayev', 'AD1882429', 2006, 'N0000011')
+    def fanga_yozil(self):
+        return self.subjects
 
-print(student.get_age(2026))
-print(student.get_info())
+    def remove_fan(self, fan):
+        if fan not in self.subjects:
+            print(f"Siz bu fanga yozilmagansiz.")
+        else:
+            return self.subjects.remove(fan)
+
+class Address:
+    def __init__(self, home, street, district, region):
+        self.home = home
+        self.street = street
+        self.district = district
+        self.region = region
+
+    def get_address(self):
+        address = f"{self.region} viloyati, {self.district} tumani, "
+        address += f"{self.street} ko'chasi, {self.home}-uy."
+        return address
+
+student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
+
+student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', student1_address)
+print(student1.address.get_address())
+
+# HOMEWORK
+# 1. Assignment
+
+class Professor(Shaxs):
+    def __init__(self, name, surname, passport, b_year, diploma, school):
+        super().__init__(name, surname, passport, b_year)
+        self.diploma = diploma
+        self.school = school
+
+    def get_info(self):
+        info = f"{self.name} {self.surname}. "
+        info += f"{self.b_year}-yilda tug'ilgan. {self.name}ning {self.diploma} diplomi bor."
+        return info
+
+    def get_diploma(self):
+        return self.diploma
+
+    def set_diploma(self, new_diploma):
+        self.diploma = new_diploma
+
+class School(Address):
+    def __init__(self, school_name, school_year, school_rating, name, surname, passport, b_year, diploma, school):
+        self.school_name = school_name
+        self.school_year = school_year
+        self.school_rating = school_rating
+
+school1 = School('Harvard', 4, 3, )
+professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD Standford school of Medicine')
