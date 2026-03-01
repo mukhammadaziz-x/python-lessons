@@ -74,11 +74,18 @@ class Professor(Shaxs):
     def set_diploma(self, new_diploma):
         self.diploma = new_diploma
 
-
+# Fanlar yaratamiz
 school1 = School('Harvard', 4, 3, )
 professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD Standford school of Medicine')
 
+# Talaba yaratamiz
 
 student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
 student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', student1_address)
 print(student1.address.get_address())
+
+# Fanga yozilamiz
+
+# Fanlarni ko'ramiz va o'chiramiz
+
+# Professor yaratamiz
