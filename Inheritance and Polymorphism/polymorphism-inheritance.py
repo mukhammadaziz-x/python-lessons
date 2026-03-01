@@ -72,17 +72,27 @@ class Professor(Shaxs):
         return info
 
 # Fanlar yaratamiz
-school1 = School('Harvard', 4, 3, )
-professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD Standford school of Medicine')
+math = Subject('Oliy matematika')
+dasturlash = Subject('Python dasturlash')
 
 # Talaba yaratamiz
-
-student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
-student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', student1_address)
-print(student1.address.get_address())
+student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', 'Andijan')
 
 # Fanga yozilamiz
+student1.fanga_yozil(math)
+student1.fanga_yozil(dasturlash)
 
 # Fanlarni ko'ramiz va o'chiramiz
+print(f"Fanlar ro'yxati: {student1.get_subjects()}")
+student1.remove_fan('Oliy matematika')
+student1.remove_fan('Tarix')
 
 # Professor yaratamiz
+professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD', 'Stanford')
+print(professor1.get_info())
+
+student1_address = Address(49, 'Objuvoz', 'Andijan', 'Andijan')
+print(student1.address.get_address())
+
+
+
