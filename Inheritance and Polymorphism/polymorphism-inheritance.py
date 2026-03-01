@@ -71,15 +71,9 @@ class Professor(Shaxs):
         info += f"Ilmiy darajasi: {self.degree}. {self.university}da ishlaydi."
         return info
 
-
     def set_diploma(self, new_diploma):
         self.diploma = new_diploma
 
-class School(Address):
-    def __init__(self, school_name, school_year, school_rating, name, surname, passport, b_year, diploma, school):
-        self.school_name = school_name
-        self.school_year = school_year
-        self.school_rating = school_rating
 
 school1 = School('Harvard', 4, 3, )
 professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD Standford school of Medicine')
