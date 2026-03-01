@@ -63,7 +63,7 @@ class Address:
 class Professor(Shaxs):
     def __init__(self, name, surname, passport, b_year, degree, university):
         super().__init__(name, surname, passport, b_year)
-        self.diploma = diploma
+        self.degree = degree
         self.school = school
 
     def get_info(self):
