@@ -64,7 +64,7 @@ class Professor(Shaxs):
     def __init__(self, name, surname, passport, b_year, degree, university):
         super().__init__(name, surname, passport, b_year)
         self.degree = degree
-        self.school = school
+        self.university = university
 
     def get_info(self):
         info = f"{self.name} {self.surname}. "
