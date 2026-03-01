@@ -68,11 +68,9 @@ class Professor(Shaxs):
 
     def get_info(self):
         info = f"{self.name} {self.surname}. "
-        info += f"{self.b_year}-yilda tug'ilgan. {self.name}ning {self.diploma} diplomi bor."
+        info += f"Ilmiy darajasi: {self.degree}. {self.university}da ishlaydi."
         return info
 
-    def get_diploma(self):
-        return self.diploma
 
     def set_diploma(self, new_diploma):
         self.diploma = new_diploma
