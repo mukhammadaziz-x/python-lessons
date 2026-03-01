@@ -59,7 +59,6 @@ class Address:
 
 # HOMEWORK
 # 1. Assignment
-
 class Professor(Shaxs):
     def __init__(self, name, surname, passport, b_year, degree, university):
         super().__init__(name, surname, passport, b_year)
@@ -74,6 +73,9 @@ class Professor(Shaxs):
 # Fanlar yaratamiz
 math = Subject('Oliy matematika')
 dasturlash = Subject('Python dasturlash')
+
+# Manzilni talabaga qo'shamiz
+address1 = Address(49, 'Objuvoz', "Xamdo'stlik", 'Andijan')
 
 # Talaba yaratamiz
 student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', 'Andijan')
