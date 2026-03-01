@@ -26,9 +26,6 @@ class Student(Shaxs):
     def get_id(self):
         return self.id
 
-    def get_level(self):
-        return self.level
-
     def get_info(self):
         info = f"{self.name} {self.surname}. "
         info += f"{self.get_level()}-bosqish, ID: {self.get_id()}"
