@@ -44,6 +44,12 @@ class Avto:
         else:
             print("Mashina km kamaytirib bo'lmaydi.")
 
+class Bus:
+    pass
+
+class Train:
+    pass
+
 
 # print(Avto.get_num_avto())
 

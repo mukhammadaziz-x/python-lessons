@@ -1,5 +1,5 @@
 # import avto
-from avto import Avto
+from avto import Avto, Bus, Train
 
 car1 = Avto('GM', 'Malibu', 'black', 30000, 1000)
 car2 = Avto('BMW', 'X8', 'white', 353000, 19000)
