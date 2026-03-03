@@ -35,6 +35,15 @@ class Avto:
     def get_km(self):
         return self.__km
 
+    def get_id(self):
+        return self.__id
+
+    def add_km(self, km):
+        if km >= 0:
+            self.__km += km
+        else:
+            print("Mashina km kamaytirib bo'lmaydi.")
+
 car1 = Avto('GM', 'Malibu', 'black', 30000, 1000)
 car2 = Avto('BMW', 'X8', 'white', 353000, 19000)
 car3 = Avto('Toyota', 'KSI 21', 'blue', 11000, 12000)
