@@ -5,7 +5,7 @@ from reportlab.graphics.charts.piecharts import theta0
 
 
 class Avto:
-    num_avto = 0
+    __num_avto = 0
     # PI = 3.14159
     def __init__(self, make, model, color, price, km):
         self.make = make
@@ -14,7 +14,7 @@ class Avto:
         self.price = price
         self.__km = km
         self.__id = uuid4()
-        self.num_avto += 1
+        Avto.__num_avto += 1
 
     # def get_km(self):
     #     return self.__km
@@ -28,9 +28,9 @@ class Avto:
     #     else:
     #         print("Mashina km kamaytirib bo'lmaydi")
 
-    @classmethod
+    @classmethod # Decorator
     def get_num_avto(cls):
-        return cls.num_avto
+        return cls.__num_avto
 
     def get_km(self):
         return self.__km
@@ -39,7 +39,7 @@ car1 = Avto('GM', 'Malibu', 'black', 30000, 1000)
 car2 = Avto('BMW', 'X8', 'white', 353000, 19000)
 car3 = Avto('Toyota', 'KSI 21', 'blue', 11000, 12000)
 
-print(car3.num_avto)
+print(Avto.get_num_avto())
 
 # car1.add_km(150)
 # print(car1.get_km())
