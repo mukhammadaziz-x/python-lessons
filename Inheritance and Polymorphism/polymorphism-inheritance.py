@@ -60,13 +60,10 @@ class Student(Shaxs):
         else:
             print("Bu fan emas!")
 
-    def get_studentId(self):
-        return self.__student_id
-
     def get_info(self):
         info = f"{self.name} {self.surname}. "
         info += f"Passport: {Student.get_passport()}, {Student.get_birthdate()}-yilda tug'ilgan. "
-        info += f"Student ID: {Student.get_studentId()}. "
+        info += f"Student ID: {self.__student_id}. "
         info += f"{self.name} O'zbekiston {self.get_address()} shahrida tug'ilgan. U hozirda {self.get_address()} tumani, {self.get_address()} ko'chasida {self.get_address()}-uyda yashab kelmoqda."
         return info
 
@@ -85,6 +82,15 @@ class Student(Shaxs):
     def get_subjects(self):
         return [fan.name for fan in self.__list_subjects]
 
+class Professor(Shaxs):
+    def __init__(self, name, surname, age, passport, birth_date, address, degree, university):
+        super().__init__(name, surname, age, passport, birth_date, address)
+        self.degree = degree
+        self.university = university
+
+    def get_info(self):
+        return f"{self.name} {self.surname}. Ilmiy darajasi: {self.degree}. {self.university}da ishlaydi."
+
 class Address:
     def __init__(self, home, street, district, region):
         self.home = home
@@ -97,13 +103,6 @@ class Address:
         address += f"{self.street} ko'chasi, {self.home}-uy."
         return address
 
-# HOMEWORK
-# 1. Assignment
-class Professor(Shaxs):
-    def __init__(self, name, surname, passport, birth_date, degree, university):
-        super().__init__(name, surname, passport, birth_date)
-        self.degree = degree
-        self.university = university
 
     def get_info(self):
         info = f"{self.name} {self.surname}. "
