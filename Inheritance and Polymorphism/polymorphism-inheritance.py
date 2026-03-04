@@ -1,12 +1,20 @@
+from uuid import uuid4
+
 class Shaxs:
-    def __init__(self, name, surname, passport, id, birth_date, address):
+    __num_people = 0
+    def __init__(self, name, surname, age, passport, id, birth_date, address):
         self.name = name
         self.surname = surname
+        self.age = age
         self.__passport = passport
-        self.__id = id
+        self.__id = uuid4()
         self.__birth_date = birth_date
         self.__address = address
-        self.people_count = []
+        Shaxs.__num_people += 1
+
+    @classmethod
+    def get_peopleNum(cls):
+        return cls.__num_people
 
     def get_passport(self):
         return self.__passport
@@ -31,6 +39,7 @@ class Subject:
 
 
 class Student(Shaxs):
+    __students_count = 0
     def __init__(self, name, surname, passport, id, birth_date, address, rating, scholarship, list_subjects, student_id):
         super().__init__(name, surname, passport, id, birth_date, address)
         self.__rating = rating
@@ -38,27 +47,34 @@ class Student(Shaxs):
         self.__list_subjects = list_subjects
         self.__student_id = student_id
         self.level = 1
-        self.students_count = []
+        Student.__students_count += 1
+
+    @classmethod
+    def get_studentCount(cls):
+        return cls.__students_count
 
     def fanga_yozil(self, fan_obyekti):
         if fan_obyekti in (fan_obyekti, Subject):
-            self.subjects.append(fan_obyekti)
+            self.__list_subjects.append(fan_obyekti)
             print(f"{fan_obyekti.name} fani qo'shildi!")
         else:
             print("Bu fan emas!")
 
+    def get_studentId(self):
+        return self.__student_id
+
     def get_info(self):
         info = f"{self.name} {self.surname}. "
-        info += f"Passport: {self.passport}, {self.b_year}-yilda tug'ilgan. "
-        info += f"Student ID: {self.student_id}. "
-        info += f"{self.name} O'zbekiston {self.address.region} shahrida tug'ilgan. U hozirda {self.address.district} tumani, {self.address.street} ko'chasida {self.address.home}-uyda yashab kelmoqda."
+        info += f"Passport: {Student.get_passport()}, {Student.get_birthdate()}-yilda tug'ilgan. "
+        info += f"Student ID: {Student.get_studentId()}. "
+        info += f"{self.name} O'zbekiston {self.get_address()} shahrida tug'ilgan. U hozirda {self.get_address()} tumani, {self.get_address()} ko'chasida {self.get_address()}-uyda yashab kelmoqda."
         return info
 
     def remove_fan(self, fan_nomi):
         topildi = False
-        for fan in self.subjects:
+        for fan in self.__list_subjects:
             if fan.name == fan_nomi:
-                self.subjects.remove(fan)
+                self.__list_subjects.remove(fan)
                 topildi = True
                 print(f"{fan_nomi} o'chirildi.")
                 break
@@ -67,7 +83,7 @@ class Student(Shaxs):
             print("Siz bu fanga yozilmagansiz.")
 
     def get_subjects(self):
-        return [fan.name for fan in self.subjects]
+        return [fan.name for fan in self.__list_subjects]
 
 class Address:
     def __init__(self, home, street, district, region):
@@ -84,8 +100,8 @@ class Address:
 # HOMEWORK
 # 1. Assignment
 class Professor(Shaxs):
-    def __init__(self, name, surname, passport, b_year, degree, university):
-        super().__init__(name, surname, passport, b_year)
+    def __init__(self, name, surname, passport, birth_date, degree, university):
+        super().__init__(name, surname, passport, birth_date)
         self.degree = degree
         self.university = university
 
