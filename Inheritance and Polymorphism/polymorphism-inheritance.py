@@ -2,7 +2,7 @@ from uuid import uuid4
 
 class Shaxs:
     __num_people = 0
-    def __init__(self, name, surname, age, passport, id, birth_date, address):
+    def __init__(self, name, surname, age, passport, birth_date, address): # 'id' olib tashlandi, chunki u pastda uuid4() bilan yaratilyapti
         self.name = name
         self.surname = surname
         self.age = age
@@ -37,14 +37,14 @@ class Subject:
     def __init__(self, name):
         self.name = name
 
-
 class Student(Shaxs):
     __students_count = 0
-    def __init__(self, name, surname, passport, id, birth_date, address, rating, scholarship, list_subjects, student_id):
-        super().__init__(name, surname, passport, id, birth_date, address)
+    # Argumentlar Shaxs klassiga moslandi
+    def __init__(self, name, surname, age, passport, birth_date, address, rating, scholarship, list_subjects, student_id):
+        super().__init__(name, surname, age, passport, birth_date, address)
         self.__rating = rating
         self.__scholarship = scholarship
-        self.__list_subjects = list_subjects
+        self.__list_subjects = list_subjects if isinstance(list_subjects, list) else [] # Ro'yxat bo'lishini ta'minlash
         self.__student_id = student_id
         self.level = 1
         Student.__students_count += 1
@@ -54,17 +54,21 @@ class Student(Shaxs):
         return cls.__students_count
 
     def fanga_yozil(self, fan_obyekti):
-        if fan_obyekti in (fan_obyekti, Subject):
+        # Tekshirish mantiqi to'g'irlandi
+        if isinstance(fan_obyekti, Subject):
             self.__list_subjects.append(fan_obyekti)
             print(f"{fan_obyekti.name} fani qo'shildi!")
         else:
             print("Bu fan emas!")
 
     def get_info(self):
+        # Student.get_passport() emas, self.get_passport() bo'lishi kerak
         info = f"{self.name} {self.surname}. "
-        info += f"Passport: {Student.get_passport()}, {Student.get_birthdate()}-yilda tug'ilgan. "
+        info += f"Passport: {self.get_passport()}, {self.get_birthdate()}-yilda tug'ilgan. "
         info += f"Student ID: {self.__student_id}. "
-        info += f"{self.name} O'zbekiston {self.get_address()} shahrida tug'ilgan. U hozirda {self.get_address()} tumani, {self.get_address()} ko'chasida {self.get_address()}-uyda yashab kelmoqda."
+        # Address obyektidan get_address() metodini chaqirish
+        manzil_matni = self.get_address().get_address()
+        info += f"{self.name} hozirda O'zbekiston, {manzil_matni}da yashab kelmoqda."
         return info
 
     def remove_fan(self, fan_nomi):
@@ -75,7 +79,6 @@ class Student(Shaxs):
                 topildi = True
                 print(f"{fan_nomi} o'chirildi.")
                 break
-
         if not topildi:
             print("Siz bu fanga yozilmagansiz.")
 
@@ -99,36 +102,28 @@ class Address:
         self.region = region
 
     def get_address(self):
-        address = f"{self.region} viloyati, {self.district} tumani, "
-        address += f"{self.street} ko'chasi, {self.home}-uy."
-        return address
+        return f"{self.region} viloyati, {self.district} tumani, {self.street} ko'chasi, {self.home}-uy."
 
+# HOMEWORK
+# 1. Manzil yaratish
+address1 = Address(49, 'Objuvoz', "Xamdo'stlik", 'Andijan')
 
-    def get_info(self):
-        info = f"{self.name} {self.surname}. "
-        info += f"Ilmiy darajasi: {self.degree}. {self.university}da ishlaydi."
-        return info
-
-# Fanlar yaratamiz
+# 2. Fanlar yaratish
 math = Subject('Oliy matematika')
 dasturlash = Subject('Python dasturlash')
 
-# Manzilni talabaga qo'shamiz
-address1 = Address(49, 'Objuvoz', "Xamdo'stlik", 'Andijan')
-
-# Talaba yaratamiz
-student1 = Student('Muhammadaziz', 'Xabibullayev', 'AD1883210', 2006, '0000012', address1)
+# 3. Talaba yaratish (Argumentlar soni va tartibi to'g'irlandi)
+student1 = Student('Muhammadaziz', 'Xabibullayev', 20, 'AD1883210', 2006, address1, 1, 34000, [], 'AD132411')
 print(student1.get_info())
 
-# Fanga yozilamiz
+# Fanga yozilish
 student1.fanga_yozil(math)
 student1.fanga_yozil(dasturlash)
 
-# Fanlarni ko'ramiz va o'chiramiz
+# Fanlarni ko'rish va o'chirish
 print(f"Fanlar ro'yxati: {student1.get_subjects()}")
 student1.remove_fan('Oliy matematika')
-student1.remove_fan('Tarix')
 
-# Professor yaratamiz
-professor1 = Professor('Andrew', 'Huberman', 'DA23111', 1975, 'PHD', 'Stanford')
+# 4. Professor yaratish (Argumentlar to'g'irlandi)
+professor1 = Professor('Andrew', 'Huberman', 48, 'DA23111', 1975, address1, 'PHD', 'Stanford')
 print(professor1.get_info())
