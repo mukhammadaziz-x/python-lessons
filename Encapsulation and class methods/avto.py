@@ -1,9 +1,6 @@
 # Encapsulation
 from uuid import uuid4
 
-from reportlab.graphics.charts.piecharts import theta0
-
-
 class Avto:
     __num_avto = 0
     # PI = 3.14159

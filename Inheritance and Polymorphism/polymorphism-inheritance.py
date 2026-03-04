@@ -1,13 +1,28 @@
 class Shaxs:
-    def __init__(self, name, surname, passport, b_year):
+    def __init__(self, name, surname, passport, id, birth_date, address):
         self.name = name
         self.surname = surname
-        self.passport = passport
-        self.b_year = b_year
+        self.__passport = passport
+        self.__id = id
+        self.__birth_date = birth_date
+        self.__address = address
+        self.people_count = []
+
+    def get_passport(self):
+        return self.__passport
+
+    def get_id(self):
+        return self.__id
+
+    def get_birthdate(self):
+        return self.__birth_date
+
+    def get_address(self):
+        return self.__address
 
     def get_info(self):
         info = f"{self.name} {self.surname}. "
-        info += f"Passport: {self.passport}, {self.b_year}-yilda tug'ilgan."
+        info += f"Passport: {self.__passport}, {self.__birth_date}-yilda tug'ilgan."
         return info
 
 class Subject:
@@ -16,12 +31,14 @@ class Subject:
 
 
 class Student(Shaxs):
-    def __init__(self, name, surname, passport, b_year, student_id, address):
-        super().__init__(name, surname, passport, b_year)
-        self.student_id = student_id
-        self.address = address
+    def __init__(self, name, surname, passport, id, birth_date, address, rating, scholarship, list_subjects, student_id):
+        super().__init__(name, surname, passport, id, birth_date, address)
+        self.__rating = rating
+        self.__scholarship = scholarship
+        self.__list_subjects = list_subjects
+        self.__student_id = student_id
         self.level = 1
-        self.subjects = []
+        self.students_count = []
 
     def fanga_yozil(self, fan_obyekti):
         if fan_obyekti in (fan_obyekti, Subject):
