@@ -31,7 +31,26 @@ class Avtosalon:
     def __repr__(self):
         return f"{self.name} avtosaloni"
 
+    def __getitem__(self, index):
+        return self.avtolar[index]
+
+    def __setitem__(self, index, value):
+        self.avtolar[index] = value
+
+    def add_avto(self, *value):
+        for avto in value:
+            if isinstance(avto, Avto):
+                self.avtolar.append(avto)
+            else:
+                print("Avto kiriting")
 
 avto1 = Avto('GM', 'Malibu', 'black', 2020, 30000)
 avto2 = Avto('GM', 'Lacetti', 'white', 2020, 20000)
-print(avto1)
+
+salon1 = Avtosalon("MaxAvto")
+salon1.add_avto(avto1, avto2)
+
+print(salon1[0])
+salon1[0] = Avto('Chevrolet', 'Damas', 'white', 2015, 7000)
+print(salon1[0])
+print(salon1[:])
