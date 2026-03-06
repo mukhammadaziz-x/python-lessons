@@ -17,3 +17,15 @@
 # pi = float(pi)
 # print(type(pi))
 
+filename = 'data/students.py'
+# with open(filename) as file:
+#     for line in file:
+#         print(line)
+
+with open(filename) as file:
+    students = file.readlines()
+
+print(students)
+
+students = [student.rstrip() for student in students]
+print(students)
