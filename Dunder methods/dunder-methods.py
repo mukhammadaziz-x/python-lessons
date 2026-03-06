@@ -1,6 +1,3 @@
-from List.list import prices
-
-
 # class Avto:
 #     __num_avto = 0
 #     def __init__(self, make, model, color, year, price):
