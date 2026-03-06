@@ -1,4 +1,0 @@
-Muhammadaziz Xabibullayev
-Muhammadyusuf Xabibullayev
-Muhammadrasul Xabibullayev
-Muhammadamin Xabibullayev

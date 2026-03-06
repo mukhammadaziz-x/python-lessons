@@ -46,10 +46,10 @@
 #     file.write('2006')
 #     file.age('20')
 
-import pickle
-student1 = {'name': 'hasan', 'surname':'husanov', 'b_year':2003, 'course':2}
-student2 = {'name': 'muhammad', 'surname':'surhonov', 'b_year':2007, 'course':1}
-
-with open('pi.txt', 'wb') as file:
-    pickle.dump(student1, file)
-    pickle.dump(student2, file)
+# import pickle
+# student1 = {'name': 'hasan', 'surname':'husanov', 'b_year':2003, 'course':2}
+# student2 = {'name': 'muhammad', 'surname':'surhonov', 'b_year':2007, 'course':1}
+#
+# with open('pi.txt', 'wb') as file:
+#     pickle.dump(student1, file)
+#     pickle.dump(student2, file)
