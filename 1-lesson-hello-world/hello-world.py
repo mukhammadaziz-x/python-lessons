@@ -11,3 +11,4 @@
 # print(2**4)
 print('hello!')
 
+print('new user detected')
