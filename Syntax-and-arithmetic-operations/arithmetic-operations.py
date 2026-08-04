@@ -1,3 +1,6 @@
+# 2-dars. PRINT() funksiyasi
+# Muallif: Muhammadaziz
+
 # print("Assalamu alaykum")
 # print("Xayrli tong!")
 # print('Men "Dell" markasidagi noutbukni sotib oldim.')
@@ -14,14 +17,12 @@
 # print(2**4)
 # print("To'qqizning kvadrati", 9 ** 2, "ga teng")
 # print('3x3=', 3*3)
-# # Radiusi 5 ga teng bo'lgan aylananing uzunligi quyidagicha hisoblanadi.
+# Radiusi 5 ga teng bo'lgan aylananing uzunligi quyidagicha hisoblanadi.
 # print(2*5*3.14159)
-#
+
 # print("Assalamu alaykum") # Bu matn konsolda chiqadi
-# # Keyingi qator esa bajarilmaydi
-# # print("Mening ismim Muhammadaziz")
-#
-#
+# Keyingi qator esa bajarilmaydi
+# print("Mening ismim Muhammadaziz")
 #
 # # HOMEWORK
 # # 1-vazifa:
@@ -38,3 +39,13 @@
 #
 # # 5-vazifa: Katetlari 6 va 7 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasini topish.
 # print("Katetlari 6 va 7 bo\'lgan doiraning yuzi", 3.14 * (12/2) ** 2, 'ga teng')
+
+# HOMEWORK
+# 1-vazifa
+# print('"Nexia", "Tico", \'Damas\' ko\'rganlar qilar havas')
+
+# # 2-vazifa
+# print("5 ning 4-darajasi", 5**4, "ga teng bo'ladi")
+# print("22 ni 4ga bo'lganda", 22/4, "qoladi")
+# print("Tomonlari 125ga teng kvadraatning yuzi", 125*125, "ga, premetri esa", 4*125, "teng bo'ladi")
+# print("Katetlari 6 va 7 bo'lgan to'g'ri burchakli uchburchakning gipotenuzasi", (6**2+7**2)**(1/2))
